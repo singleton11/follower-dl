@@ -12,7 +12,7 @@ ENVIRONMENT_VARIABLE_NAME = 'GITHUB_TOKEN'
 @click.command()
 @click.option('--token', default=None, help='Github personal access token')
 @click.option('--initial-login', default='singleton11', help='Initial login')
-def follow_followers(token: Optional[str], initial_login: str = 'singleton11'):
+def follow_followers(token: Optional[str], initial_login: str):
     logger.info('Starting follow followers job')
     logger.info('Getting token from command line arguments')
     auth_token: str = ''
